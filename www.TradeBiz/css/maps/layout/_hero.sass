@@ -1,0 +1,136 @@
+.hero
+	min-height: 100vh
+	position: relative
+	padding: 90px 0 120px
+	display: flex
+	&-main
+		width: 100%
+		display: flex
+		&__container
+			display: flex
+			align-items: center
+			+sm
+				padding-bottom: 50%
+				text-align: center
+	&-media
+		position: absolute
+		top: 90px
+		bottom: 68px
+		right: 0
+		width: 70%
+		display: flex
+		align-items: flex-end
+		+lg
+			width: 80%
+		+sm
+			width: 100%
+			left: 0
+			bottom: 100px
+	&-video
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 65%
+			background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+	&-content
+		position: relative
+		z-index: 2
+		width: 62%
+		+sm
+			width: 100%
+		&__inner
+			max-width: 763px
+			width: 100%
+	&-descr
+		width: 80%
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		+sm
+			width: 100%
+	&-btns
+		display: flex
+		margin: -7px
+		max-width: 428px
+		+sm
+			width: calc(100% + 14px)
+			max-width: calc(100% + 14px)
+		+xs
+			flex-direction: column
+		.btn
+			margin: 7px
+			width: calc(100% - 14px)
+	&-footer
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 68px
+		width: 100%
+		border-top: 1px solid $border
+		display: flex
+		+sm
+			text-align: center
+			height: auto
+			padding: 15px 0
+		&__container
+			display: flex
+			align-items: center
+			+sm
+				display: block
+		&__title
+			width: 380px
+			padding-right: 40px
+			font-family: $s-m
+			color: #fff
+			+lg
+				width: 250px
+			+sm
+				width: 100%
+				padding: 0
+				margin-bottom: 10px
+	&-logos
+		width: calc(100% - 380px)
+		+lg
+			width: calc(100% - 250px)
+		+sm
+			width: 100%
+		&__main
+			overflow: hidden
+			position: relative
+			margin: 0 -35px
+			+md
+				margin: 0 -20px
+			&:after, &:before
+				content: ''
+				background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+				width: 33px
+				height: 100%
+				position: absolute
+				z-index: 2
+				top: 0
+				bottom: 0
+			&:before
+				left: 0
+			&:after
+				right: 0
+				transform: rotate(180deg)
+		&__inner
+			transform: translateX(-80%)
+		&__items
+			display: flex
+			align-items: center
+			width: 100%
+		&__item
+			margin-right: 70px
+			display: flex
+			align-items: center
+			+lg
+				margin-right: 45px
+			+sm
+				margin-right: 30px
