@@ -1,0 +1,73 @@
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	border-radius: 15px
+	font-family: $s-m
+	color: #fff
+	font-size: 16px
+	min-height: 55px
+	padding: 5px 30px
+	background: $primary
+	border: 1px solid rgba(255, 255, 255, 0.22)
+	box-shadow: 0px 0px 31px rgba(159, 68, 255, 0.57)
+	position: relative
+	-webkit-tap-highlight-color: transparent
+	cursor: pointer
+	appearance: none
+	outline: none
+	&--sm
+		min-height: 45px
+		padding: 5px 20px
+	&--md
+		min-width: 200px
+	&--secondary
+		background: transparent
+		box-shadow: none
+	&.start
+		svg
+			animation: stroke 1s linear
+	.lines
+		position: absolute
+		inset: 0
+		mix-blend-mode: hard-light
+		pointer-events: none
+		z-index: 1
+		& > div
+			position: absolute
+			inset: 0
+			&:last-child
+				transform: rotate(180deg)
+			svg
+				display: block
+				position: absolute
+				inset: 0
+				overflow: visible
+				fill: none
+				stroke-width: 2
+				stroke: #c9e9ff
+				width: 100%
+				height: 100%
+				stroke-dasharray: 2 10
+				stroke-dashoffset: 14
+				opacity: 0
+			svg
+				&:nth-child(1)
+					stroke: #f8fcff
+				&:nth-child(2)
+					stroke-width: 6px
+					filter: blur(20px)
+				&:nth-child(3)
+					stroke-width: 5px
+					filter: blur(6px)
+				&:nth-child(4)
+					stroke-width: 10px
+					filter: blur(56px)
+
+@keyframes stroke
+	30%, 55%
+		opacity: 1
+	100%
+		stroke-dashoffset: 4
+		opacity: 0

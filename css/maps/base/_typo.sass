@@ -1,0 +1,92 @@
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	font-family: $s-m
+	color: #fff
+	&:last-child
+		margin-bottom: 0
+h1
+	+fSize(40px, 90px, $xs, $xl)
+	line-height: .9
+	margin-bottom: 20px
+	letter-spacing: -4px
+h2
+	+fSize(32px, 48px, $xs, $xl)
+	line-height: 1
+	margin-bottom: 20px
+	letter-spacing: -2px
+h3
+	+fSize(18px, 36px, $xs, $lg)
+	line-height: 1.2
+	margin-bottom: 20px
+h4
+	+fSize(14px, 24px, $xs, $lg)
+	line-height: 1.5
+	margin-bottom: 20px
+
+a
+	color: currentColor
+	text-decoration: none
+	transition: $tr
+
+b
+	font-family: $g-m
+
+p
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+
+a:not([class])
+	color: currentColor
+	text-decoration: 0
+	border-bottom: 1px solid transparent
+	padding-bottom: .08em
+	&:hover
+		border-bottom: 1px solid currentColor
+
+ul:not([class])
+	padding: 0
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+	&:last-child
+		margin-bottom: 0
+	li
+		padding-left: 20px
+		margin-bottom: 10px
+		position: relative
+		&:last-child
+			margin-bottom: 0
+		&:before
+			content: ''
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			border: 1px solid currentColor
+			position: absolute
+			left: 0
+			top: 0.55em
+		ul, ol
+			margin-top: 10px
+
+ol:not([class])
+	counter-reset: listItem
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+	li
+		margin-bottom: 10px
+		position: relative
+		&:last-child
+			margin-bottom: 0
+		&:before
+			counter-increment: listItem
+			content: counter(listItem)'. '
+			color: currentColor
+			margin-right: 5px
+		ol
+			li:before
+				content: counters(listItem, '.') ' '
+		ul, ol
+			margin-top: 10px
+			padding-left: 20px
